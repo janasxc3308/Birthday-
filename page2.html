@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday 🎂</title>
+
+<style>
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #cdb4ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    background: rgba(255,255,255,0.92);
+    padding: 45px 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    animation: fade 1.5s ease;
+}
+
+.decor {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 40px;
+    animation: pulse 2s infinite;
+}
+
+.message {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 25px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 15px;
+    background: #ff4081;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.confetti {
+    position: absolute;
+    font-size: 25px;
+    animation: fall 5s linear infinite;
+}
+
+.c1 { left: 10%; animation-delay: 0s; }
+.c2 { left: 30%; animation-delay: 1s; }
+.c3 { left: 50%; animation-delay: 2s; }
+.c4 { left: 70%; animation-delay: 3s; }
+.c5 { left: 90%; animation-delay: 4s; }
+
+@keyframes pulse {
+    0%,100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 110vh;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 Background Music -->
+<audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="confetti c1">🎈</div>
+<div class="confetti c2">🎉</div>
+<div class="confetti c3">✨</div>
+<div class="confetti c4">🎈</div>
+<div class="confetti c5">🎊</div>
+
+<div class="container">
+
+    <div class="decor">
+        🎈 🎈 🎂 🎈 🎈
+    </div>
+
+    <h1>🎂 Happy Birthday Manishaa 🎉</h1>
+
+    <p class="message">
+     🌸 From the moment I met you, I just want you to always stay happy 😊💖 without worrying about anything. Whenever I cry 😢, you are there to take care of me 🤗❤️. In my life, you are one of the best friends I have ever had 🫶✨. Always stay in my life like this 💕🌷. I will do anything I can for you 🤝💖. Wishing you a very Happy Birthday 🎂🎉🥳! May your life always be filled with happiness, smiles, and beautiful memories 🌟💐💝.
+    </p>
+
+    <button onclick="goNext()">
+        💌 Click Here
+    </button>
+
+</div>
+
+<script>
+
+function goNext() {
+    window.location.href = "page3.html";
+}
+
+</script>
+
+</body>
+</html>
