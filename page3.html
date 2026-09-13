@@ -7,7 +7,6 @@
 <title>A Little Message 💌</title>
 
 <style>
-
 body {
     margin: 0;
     min-height: 100vh;
@@ -26,18 +25,11 @@ body {
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 10px 35px rgba(0,0,0,0.2);
-    animation: appear 1.5s ease;
 }
 
 h1 {
     color: #ff4081;
     font-size: 28px;
-}
-
-.message {
-    font-size: 20px;
-    color: #555;
-    margin: 25px 0;
 }
 
 textarea {
@@ -75,24 +67,11 @@ button {
         transform: scale(1.2);
     }
 }
-
-@keyframes appear {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- 🎵 Background Music -->
 <audio autoplay loop>
     <source src="song.mp3" type="audio/mpeg">
 </audio>
@@ -103,27 +82,32 @@ button {
 
     <h1>What you want, tell me. I will try to give you. ❤️</h1>
 
-    <textarea placeholder="Type your wish here..."></textarea>
+    <textarea id="message" placeholder="Type your wish here..."></textarea>
 
     <br>
 
-    <button onclick="showMessage()">
+    <button onclick="sendWhatsApp()">
         💌 Send
     </button>
-
-    <p id="result"></p>
 
 </div>
 
 <script>
+function sendWhatsApp() {
 
-function showMessage() {
+    let message = document.getElementById("message").value;
 
-    document.getElementById("result").innerHTML =
-        "Did you ask anything? 😊❤️";
+    if (message.trim() === "") {
+        alert("Please type a message first 😊");
+        return;
+    }
 
+    let phone = "9952257447";
+
+    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
 }
-
 </script>
 
 </body>
